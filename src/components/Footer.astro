@@ -3,14 +3,9 @@ import { Image } from 'astro:assets';
 import logoImg from '../assets/logo.png';
 
 const footerLinks = [
-  { label: 'Home', href: '#' },
-  { label: 'Solution', href: '#' },
-  { label: 'Outcomes', href: '#' },
-  { label: 'Company', href: '#' },
-  { label: 'Resources', href: '#' },
-  { label: 'Careers', href: '#' },
-  { label: 'Contact Us', href: '#' },
-  { label: 'Member Support', href: '#' },
+  { label: 'Inicio', href: '#' },
+  { label: 'Acerca', href: '#' },
+  { label: 'Propósito', href: '#' },
 ];
 ---
 
@@ -25,11 +20,11 @@ const footerLinks = [
           width={48}
           height={48}
         />
-        <p class="font-serif font-bold pt-2 text-xl">Your Company</p>
-        <p class="text-sm pt-2">Better outcomes with behavioral economics.</p>
+        <p class="font-serif font-bold pt-2 text-xl">Fundación Ezequiel Zamora</p>
+        <p class="text-sm pt-2">Desarrollo Agrario en Venezuela.</p>
       </div>
       <div>
-        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+        <h3 class="text-lg font-semibold mb-4">Acceso Rápido</h3>
         <ul class="space-y-2">
           {footerLinks.map((link) => (
             <li>
@@ -39,18 +34,19 @@ const footerLinks = [
         </ul>
       </div>
       <div>
-        <h3 class="text-lg font-semibold mb-4">Stay Connected</h3>
-        <p class="text-sm mb-4">Subscribe to our newsletter for updates</p>
+        <h3 class="text-lg font-semibold mb-4">Mantente en contacto</h3>
+        <p class="text-sm mb-4">Suscribete a nuestra newsletter</p>
         <form class="flex">
           <input type="email" placeholder="Your email" class="flex-grow rounded-l-md px-4 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary-500">
           <button type="submit" class="bg-primary-500 text-white px-4 py-2 rounded-r-md hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2">
-            Subscribe
+            Subscribir
           </button>
         </form>
       </div>
     </div>
     <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-      <p class="text-sm mb-4 md:mb-0">&copy; 2024 Your Company Inc. All rights reserved.</p>
+      <p class="text-sm mb-4 md:mb-0">&copy; 2025 Fundación Ezequiel Zamora. Todos los derechos reservados.</p>
+      <!--
       <div class="flex space-x-4">
         <a href="https://www.linkedin.com/company/yourcompany" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white">
           <span class="sr-only">LinkedIn</span>
@@ -64,7 +60,7 @@ const footerLinks = [
             <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
           </svg>
         </a>
-      </div>
+      </div> -->
     </div>
   </div>
 </footer>

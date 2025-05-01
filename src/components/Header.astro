@@ -1,13 +1,12 @@
 ---
 import { Image } from 'astro:assets';
-import logoImg from '../assets/logo.png';
+import logoImg from '../assets/logo.jpeg';
 
 const navItems = [
-  { label: 'Solution', href: '#' },
-  { label: 'Who We Help', href: '#' },
-  { label: 'Outcomes', href: '#' },
-  { label: 'Company', href: '#' },
-  { label: 'Resources', href: '#' },
+  { label: 'Inicio', href: '/' },
+  { label: 'Acerca', href: '#' },
+  { label: 'Propósito', href: '#' },
+
 ];
 ---
 
@@ -21,7 +20,7 @@ const navItems = [
         width={48}
         height={48}
       />
-      <span class="ml-2">Your Company</span>
+      <span class="ml-2">Fundación Ezequiel Zamora</span>
     </a>
     <nav class="hidden md:flex space-x-6">
       {navItems.map(item => (
@@ -31,7 +30,7 @@ const navItems = [
       ))}
     </nav>
     <a href="/#" class="bg-primary-500 text-white px-4 py-2 rounded hover:bg-primary-600 transition duration-150 ease-in-out">
-      Contact Us
+      Contacto
     </a>
   </div>
 </header>

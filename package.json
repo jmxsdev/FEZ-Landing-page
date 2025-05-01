@@ -1,9 +1,7 @@
 {
-  "name": "modern-company-astro-theme",
+  "name": "fundacion-ezequiel-zamora",
   "author": {
-    "name": "Cory Trimm",
-    "email": "cory.trimm@gmail.com",
-    "url": "https://corytrimm.com"
+    "name": "Jesús Mora"
   },
   "type": "module",
   "version": "0.0.1",
