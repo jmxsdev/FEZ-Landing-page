@@ -10,13 +10,103 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 const { title } = Astro.props;
+
+// Base domain URL without trailing slash
+const domainBaseURL = 'https://fez-landing-page.vercel.app';
+const ogImageUrl    = 'https://fez-landing-page.vercell.app/banner.jpg';
+
+// Website publisher & region
+const authorPublisher   = 'Fundación Ezequiel Zamora.';
+const geoRegion         = 'VE-G';
+
+// SEO title, description and keywords
+const seoTitle          = 'Fundación Ezequiel Zamora';
+const seoDescription    = 'Programa dedicado a reorganizar tierras ociosas con vocación agrícola, eliminando el latifundio y fomentando el desarrollo rural. Convierte terrenos en unidades productivas, integrando políticas agroalimentarias para una agricultura sostenible y seguridad alimentaria nacional.';
+const seoKeywords       = 'Fundación Ezequiel Zamora, Agricultura, Avicultura, Ganaderia, Piscicultura, Siembra, Venezuela, Fundación';
+
+// Open graph data
+const openGraph = {
+    title:          seoTitle,
+    description:    seoDescription,
+    url:            domainBaseURL,
+    image:          ogImageUrl,
+    type:           'website',
+    locale:         'es_ES',
+    siteName:       'Fundación Ezequiel Zamora'
+};
+
+// Dublin core
+const dublinCore = {
+    title:          'Fundación Ezequiel Zamora',
+    creator:        authorPublisher,
+    publisher:      authorPublisher,
+    rights:         authorPublisher,
+    description:    seoDescription,
+    language:       'es',
+    type:           'Agriculture',
+    format:         'text/html'
+};
+
 ---
 
-<html lang="en">
+<!doctype html>
+<html lang="en" class="bg-black text-gray-100 font-mono">
+
   <head>
+
+    <!-- Crawler & Robots -->
+    <meta name="robots" content="index, follow, noodp, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="revisit" content="after 7 days" />
+
+    <!-- Start: Meta-Tags -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title} | Your Company</title>
+    <meta http-equiv="content-type"         content="text/html; charset=UTF-8">
+    <meta http-equiv="Pragma"               content="cache" />
+    <meta http-equiv="X-UA-Compatible"      content="IE=edge">
+    <meta name="viewport"                   content="width=device-width, initial-scale=1">
+    <!-- End: Meta-Tags -->
+
+    <!-- Start: Theming and Favicons -->
+    <link rel="icon" type="image/svg+xml" crossorigin="anonymous" href="/img/meta.png" />
+
+    <!-- Start: Misc meta tags -->
+    <link rel="sitemap"                     href="/sitemap-index.xml" />
+    <link rel="canonical"                   href={Astro.url} />
+
+    <meta name="geo.region"                 content={geoRegion}>
+    <meta name="author"                     content={authorPublisher}>
+    <meta name="publisher"                  content={authorPublisher}>
+    <meta name="copyright"                  content={authorPublisher}>
+    <!-- End: Misc meta tags -->
+
+    <!-- Start: Facebook open graph -->
+    <meta property="og:title"               content={openGraph.title}>
+    <meta property="og:description"         content={openGraph.description}>
+    <meta property="og:url"                 content={openGraph.url}>
+    <meta property="og:type"                content={openGraph.type}>
+    <meta property="og:image"               content={openGraph.image}>
+    <meta property="og:locale"              content={openGraph.locale}>
+    <meta property="og:site_name"           content={openGraph.siteName}>
+    <!-- End: Facebook open graph -->
+
+    <!-- Start: Dublin Core (DC) -->
+    <meta name="DC.Title"                   content={dublinCore.title}>
+    <meta name="DC.Creator"                 content={dublinCore.creator}>
+    <meta name="DC.Rights"                  content={dublinCore.rights}>
+    <meta name="DC.Publisher"               content={dublinCore.publisher}>
+    <meta name="DC.Description"             content={dublinCore.description}>
+    <meta name="DC.Language"                content={dublinCore.language}>
+    <meta name="DC.Type"                    content={dublinCore.type}>
+    <meta name="DC.Format"                  content={dublinCore.format}>
+    <!-- End: Dublin Core (DC) -->
+
+    <!-- Title & Description -->
+    <title>{seoTitle}</title>
+    <meta name="description" content={seoDescription}>
+    <meta name="abstract"    content={seoDescription}>
+    <meta name="keywords"    content={seoKeywords}>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body class="font-inter">
