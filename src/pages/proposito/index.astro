@@ -1,0 +1,23 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import Features from '../../components/Features.astro';
+import heroImg from '../../assets/hero-image.jpg';
+import CallOutWithImageLeft from '../../components/CallOutWithImageLeft.astro';
+
+---
+
+<Layout title="Propósito | Fundación Ezequiel Zamora">
+    <Hero 
+    imageSrc={heroImg}
+    imageAlt="Familia feliz"
+    title="Enriquecer el campo Venezolano"
+    highlightedWord="campo"
+    highlightColor="green"
+    description="Programa dedicado a reorganizar tierras ociosas con vocación agrícola, eliminando el latifundio y fomentando el desarrollo rural. Convierte terrenos en unidades productivas, integrando políticas agroalimentarias para una agricultura sostenible y seguridad alimentaria nacional."
+    imagePosition="left"
+    />
+  <Features />
+  <CallOutWithImageLeft />
+
+</Layout>

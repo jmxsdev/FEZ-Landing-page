@@ -9,10 +9,18 @@ import CallToAction from '../components/CallToAction.astro';
 import HowItWorks from '../components/HowItWorks.astro';
 import Testimonials from '../components/Testimonials.astro';
 import ContactForm from '../components/ContactForm.astro';
+import heroImg from '../assets/hero-image.jpg';
 ---
 
 <Layout title="Fundación Ezequiel Zamora">
-  <Hero />
+  <Hero 
+    imageSrc={heroImg}
+    imageAlt="Agruicultor sembrando"
+    title="Desarrollo Agrario en Venezuela"
+    highlightedWord="Agrario"
+    highlightColor="green"
+    description="Programa dedicado a reorganizar tierras ociosas con vocación agrícola, eliminando el latifundio y fomentando el desarrollo rural. Convierte terrenos en unidades productivas, integrando políticas agroalimentarias para una agricultura sostenible y seguridad alimentaria nacional."
+  />
   <KeyMetrics />
   <Features />
   <CallOutWithImageLeft />
